@@ -1,0 +1,105 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Background Video */
+  #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  /* Dark overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  /* Header (logo + links) */
+  .header {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: relative;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;  /* يحاذيهم عموديًا */
+    gap: 12px 0px;            /* مسافة بين اللوجو والعنوان */
+    padding: 0  20px;
+  }
+  
+  .logo {
+    width: 60px;          /* حجم اللوجو */
+    height: auto;
+  }
+  
+  .navbar h1 {
+    font-size: 16px;
+    color: white;
+    margin: 0;
+    margin-left: auto;
+  }
+  
+  .links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: auto;   /* هكذا القائمة تذهب يمين */
+    padding: 0;          /* الأفضل ازالة البادينج الافتراضي */
+  }
+  
+  .links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    margin: 0;           /* لا حاجة لمارجن هنا */
+  }
+  
+  .links a:hover {
+    color: #de70b4;
+  }
+  
+  .hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  /* Centered Hero Text */
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 16px;
+    color: #cfd6e1;
+    line-height: 1.6;
+  }
